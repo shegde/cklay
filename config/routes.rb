@@ -1,7 +1,10 @@
 Cklay::Application.routes.draw do
-  get "pages/home"
+  #get "pages/home"
 
-  get "pages/contact"
+  #get "pages/contact"
+  
+  match '/contact', :to => 'pages#contact'
+  match '/about',   :to => 'pages#about'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -52,7 +55,7 @@ Cklay::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => "welcome#index"
+   root :to => "pages#home"
 
   # See how all your routes lay out with "rake routes"
 
